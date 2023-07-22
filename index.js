@@ -20,11 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cookieParser());
 
-app.use(
-  cors({
-    origin: "http://localhost:5173/",
-  })
-);
+app.use(cors());
 
 app.use("/api/users", userRoutes);
 
